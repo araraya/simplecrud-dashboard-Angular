@@ -1,0 +1,65 @@
+
+<app-navbar></app-navbar>
+
+<button type="button"  data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-primary float-end m-3"> Add </button>
+<table class="table mt-3">
+  
+    <thead>
+        <tr>
+            <th scope="col"> Nama Mobil</th>
+            <th scope="col"> Merk</th>
+            <th scope="col"> Harga</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let row of mobilData">
+            
+            <td>{{row.namaMobil}}</td>
+            <td>{{row.merk}}</td>
+            <td>{{row.harga}}</td>
+            
+            <td>
+                <button (click)="onEditMobil(row)" class="btn btn-info m-1" data-bs-toggle="modal" data-bs-target="#exampleModal">Edit</button>
+                <button (click)="deleteMobil(row)" class="btn btn-danger max-3 m-1">Delete</button>
+            </td>
+
+        </tr>
+    </tbody>
+</table>
+
+
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Detail Pegawai</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form [formGroup]="formValueMobil">
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Nama Mobil</label>
+                  <input type="text" formControlName="namaMobil" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">  
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Merk </label>
+                    <input type="text" formControlName="merk" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">  
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Harga Mobil</label>
+                    <input type="number" formControlName="harga" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">  
+                  </div>
+                  
+              </form>
+        </div>
+        <div class="modal-footer">
+          <button id="cancel" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button *ngIf="btnSaveShow" (click)="postMobilDetails()" type="button" class="btn btn-primary">Add</button>
+          <button *ngIf="btnUpdateShow" (click)="updateMobilDetails()" type="button" class="btn btn-primary">Update</button>
+        </div>
+      </div>
+    </div>
+  </div>

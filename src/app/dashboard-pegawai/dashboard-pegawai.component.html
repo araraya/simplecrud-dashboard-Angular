@@ -1,0 +1,125 @@
+
+<app-navbar></app-navbar>
+
+<button type="button"  data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-primary float-end m-3"> Add </button>
+
+<table class="table mt-3">
+    
+    <thead>
+        <tr>
+            <th scope="col"> Nama</th>
+            <th scope="col"> Jenis Kelamin</th>
+            <th scope="col"> Tempat Lahir </th>
+            <th scope="col"> Tanggal Lahir</th>
+            <th scope="col"> Alamat Rumah</th>
+            <th scope="col"> Nomor Handphone</th>
+            <th scope="col">Nama Perusahaan</th>
+            <th scope="col">Mobil 1</th>
+            <th scope="col">Mobil 2</th>
+            <th scope="col">Mobil 3</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let row of employesData">
+            <td>{{row.nama}}</td>
+            <td>{{row.jenisKelamin}}</td>
+            <td>{{row.tempatLahir}}</td>
+            <td>{{row.tanggalLahir}}</td>
+            <td>{{row.nomorHP}}</td>
+            <td>{{row.namaPerusahaan}}</td>
+            <td>{{row.mobil1}}</td>
+            <td>{{row.mobil2}}</td>
+            <td>{{row.mobil3}}</td>
+            <td>
+                <button (click)="onEdit(row)" class="btn btn-info m-1" data-bs-toggle="modal" data-bs-target="#exampleModal">Edit</button>
+                <button (click)="deleteEmployee(row)" class="btn btn-danger max-3 m-1">Delete</button>
+            </td>
+
+        </tr>
+    </tbody>
+</table>
+
+
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Detail Pegawai</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form [formGroup]="formValue">
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Nama</label>
+                  <input type="text" formControlName="nama" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">  
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Jenis Kelamin</label>
+                    <input type="text" formControlName="jenisKelamin" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">  
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Tempat Lahir</label>
+                    <input type="text" formControlName="tempatLahir" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">  
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Tanggal Lahir</label>
+                    <input type="date" formControlName="tanggalLahir" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">  
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Alamat Rumah</label>
+                    <input type="text" formControlName="alamatRumah" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">  
+                  </div> 
+                  <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Nomor HP</label>
+                    <input type="text" formControlName="nomorHP" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">  
+                  </div>  
+                  <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Nama Perusahaan</label>
+                    <input type="text" formControlName="namaPerusahaan" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">  
+                  </div> 
+                  
+                  <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Mobil 1</label>
+                    <input type="text" formControlName="mobil1" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">  
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Mobil 2</label>
+                    <input type="text" formControlName="mobil2" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">  
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Mobil 3</label>
+                    <input type="text" formControlName="mobil3" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">  
+                  </div>
+              </form>
+        </div>
+        <div class="modal-footer">
+          <button id="cancel" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button *ngIf="btnSaveShow" (click)="postEmployesDetails()" type="button" class="btn btn-primary">Add</button>
+          <button *ngIf="btnUpdateShow" (click)="updateEmployesDetails()" type="button" class="btn btn-primary">Update</button>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- 
+  <div width="100" height="100">
+    <canvas id="canvas1">{{chartKelamin}}</canvas>
+  </div>
+
+  <div width="100" height="100">
+    <canvas id="canvas2">{{chartMobil}}</canvas>
+  </div>
+
+  <div width="100" height="100">
+    <canvas id="canvas3">{{chartAset}}</canvas>
+  </div>
+
+
+  <div width="100" height="100">
+    <canvas id="canvas4">{{chartJumlahKaryawan}}</canvas>
+  </div>
+
+  <div width="100" height="100">
+    <canvas id="canvas5">{{chartMobilPopuler}}</canvas>
+  </div> -->

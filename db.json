@@ -1,0 +1,223 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "nama": "Budiarto Sanusi",
+      "jenisKelamin": "Laki-laki",
+      "tempatLahir": "Bandung",
+      "tanggalLahir": "1990-02-03",
+      "alamatRumah": "Jalan Mawar",
+      "nomorHP": "0812-2819-2918",
+      "namaPerusahaan": "Solusi Pratama",
+      "mobil1": "Wuling Formo",
+      "mobil2": "Daihatsu Sigra",
+      "mobil3": "Toyota Inova"
+    },
+    {
+      "id": 2,
+      "nama": "Tanjung Perkasa",
+      "jenisKelamin": "Laki-laki",
+      "tempatLahir": "Aceh",
+      "tanggalLahir": "1991-11-23",
+      "alamatRumah": "Jalan Melati",
+      "nomorHP": "0853-2182-8675",
+      "namaPerusahaan": "Jaringan Solusindo",
+      "mobil1": "Suzuki Karimun",
+      "mobil2": "Toyota Calya",
+      "mobil3": ""
+    },
+    {
+      "id": 3,
+      "nama": "Rosi",
+      "jenisKelamin": "Perempuan",
+      "tempatLahir": "Jakarta",
+      "tanggalLahir": "1991-05-12",
+      "alamatRumah": "Jalan Gang",
+      "nomorHP": "0812-5748-9382",
+      "namaPerusahaan": "Budi Makmur",
+      "mobil1": "Renault KWID",
+      "mobil2": "",
+      "mobil3": ""
+    },
+    {
+      "id": 5,
+      "nama": "Zainab Permata",
+      "jenisKelamin": "Perempuan",
+      "tempatLahir": "Perempuan",
+      "tanggalLahir": "1994-09-29",
+      "alamatRumah": "Jl Batu",
+      "nomorHP": "0859-2999-9201",
+      "namaPerusahaan": "Budi Makmur",
+      "mobil1": "",
+      "mobil2": "",
+      "mobil3": ""
+    },
+    {
+      "id": 6,
+      "nama": "Susi",
+      "jenisKelamin": "Perempuan",
+      "tempatLahir": "Surabaya",
+      "tanggalLahir": "1994-06-29",
+      "alamatRumah": "Jalan Kerikil",
+      "nomorHP": "0855-0902-8981",
+      "namaPerusahaan": "Solusi Pratama",
+      "mobil1": "Toyota Agya",
+      "mobil2": "",
+      "mobil3": ""
+    },
+    {
+      "id": 7,
+      "nama": "Alfredo",
+      "jenisKelamin": "Laki-laki",
+      "tempatLahir": "Pontianak",
+      "tanggalLahir": "1991-01-30",
+      "alamatRumah": "Gang Kenangan",
+      "nomorHP": "0856-9203-3985",
+      "namaPerusahaan": "Jaringan Solusindo",
+      "mobil1": "Toyota Agya",
+      "mobil2": "",
+      "mobil3": ""
+    },
+    {
+      "id": 8,
+      "nama": "Puspa Sukma",
+      "jenisKelamin": "Perempuan",
+      "tempatLahir": "Pekanbaru",
+      "tanggalLahir": "1985-02-03",
+      "alamatRumah": "Simpang Kemangi",
+      "nomorHP": "0857-1828-3838",
+      "namaPerusahaan": "",
+      "mobil1": "Toyota Inova",
+      "mobil2": "",
+      "mobil3": ""
+    },
+    {
+      "id": 9,
+      "nama": "Imam Permadi",
+      "jenisKelamin": "Laki-laki",
+      "tempatLahir": "Lombok",
+      "tanggalLahir": "1993-09-03",
+      "alamatRumah": "Jalan Jambu",
+      "nomorHP": "0812-3999-1111",
+      "namaPerusahaan": "Solusi Pratama",
+      "mobil1": "",
+      "mobil2": "",
+      "mobil3": ""
+    },
+    {
+      "id": 10,
+      "nama": "John Budiarta",
+      "jenisKelamin": "Laki-laki",
+      "tempatLahir": "Sorong",
+      "tanggalLahir": "1991-04-12",
+      "alamatRumah": "Jalan Cabai",
+      "nomorHP": "0821-3453-9999",
+      "namaPerusahaan": "Jaringan Solusindo",
+      "mobil1": "Datsun Go",
+      "mobil2": "Daihatsu Sigra",
+      "mobil3": ""
+    }
+  ],
+  "signUp": [
+    {
+      "fullname": "watahsi",
+      "email": "watashi@gmail.com",
+      "password": "1234",
+      "id": 2
+    },
+    {
+      "fullname": "raya",
+      "email": "arya@yaho.com",
+      "password": "1234",
+      "id": 3
+    },
+    {
+      "fullname": "admin1",
+      "email": "admin@gmail.com",
+      "password": "1234",
+      "id": 4
+    }
+  ],
+  "perusahaan": [
+    {
+      "id": 2,
+      "namaPerusahaan": "Solusi Pratama",
+      "alamat": "Jalan Raya Dukuh",
+      "nomorTelepon": "021-293849"
+    },
+    {
+      "id": 3,
+      "namaPerusahaan": "Jaringan Solusindo",
+      "alamat": "Simpang 7",
+      "nomorTelepon": "021-869583"
+    },
+    {
+      "id": 4,
+      "namaPerusahaan": "Budi Makmur",
+      "alamat": "Ruko Melati",
+      "nomorTelepon": "021-584932"
+    }
+  ],
+  "mobil": [
+    {
+      "id": 1,
+      "namaMobil": "Wuling Formo",
+      "merk": "Wuling",
+      "harga": 100000000
+    },
+    {
+      "id": 2,
+      "namaMobil": "Suzuki Karimun",
+      "merk": "Suzuki",
+      "harga": 105000000
+    },
+    {
+      "id": 3,
+      "namaMobil": "Renault KWID",
+      "merk": "Renault",
+      "harga": 110000000
+    },
+    {
+      "id": 4,
+      "namaMobil": "Datsun Go",
+      "merk": "Datsun",
+      "harga": 144000000
+    },
+    {
+      "id": 5,
+      "namaMobil": "Daihatsu Sigra",
+      "merk": "Daihatsu",
+      "harga": 100000000
+    },
+    {
+      "id": 6,
+      "namaMobil": "Toyota Calya",
+      "merk": "Toyota",
+      "harga": 88000000
+    },
+    {
+      "id": 7,
+      "namaMobil": "Daihatsu Alya",
+      "merk": "Daihatsu",
+      "harga": 99000000
+    },
+    {
+      "id": 8,
+      "namaMobil": "Toyota Agya",
+      "merk": "Toyota",
+      "harga": 84000000
+    },
+    {
+      "id": 9,
+      "namaMobil": "Toyota Inova",
+      "merk": "Toyota",
+      "harga": 135000000
+    },
+    {
+      "id": 10,
+      "namaMobil": "Honda Brio",
+      "merk": "Honda",
+      "harga": 90000000
+    }
+  ]
+}

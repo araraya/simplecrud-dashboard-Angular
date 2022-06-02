@@ -1,0 +1,67 @@
+
+<app-navbar></app-navbar>
+
+<button type="button"  data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-primary float-end m-3"> Add </button>
+
+<table class="table mt-3">
+  
+    <thead>
+      
+        <tr>
+            <th scope="col"> Nama Perusahaan</th>
+            <th scope="col"> Alamat</th>
+            <th scope="col"> Nomor Telepon</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let row of perusahaanData">
+            
+            <td>{{row.namaPerusahaan}}</td>
+            <td>{{row.alamat}}</td>
+            <td>{{row.nomorTelepon}}</td>
+            
+            <td>
+                <button (click)="onEditPerusahaan(row)" class="btn btn-info m-1" data-bs-toggle="modal" data-bs-target="#exampleModal">Edit</button>
+                <button (click)="deletePerusahaan(row)" class="btn btn-danger max-3 m-1">Delete</button>
+            </td>
+
+        </tr>
+    </tbody>
+</table>
+
+
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Detail Pegawai</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form [formGroup]="formValuePerusahaan">
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Nama Perusahaan</label>
+                  <input type="text" formControlName="namaPerusahaan" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">  
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Alamat </label>
+                    <input type="text" formControlName="alamat" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">  
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Nomor Telepon</label>
+                    <input type="text" formControlName="nomorTelepon" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">  
+                  </div>
+                  
+              </form>
+        </div>
+        <div class="modal-footer">
+          <button id="cancel" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button *ngIf="btnSaveShow" (click)="postPerusahaanDetails()" type="button" class="btn btn-primary">Add</button>
+          <button *ngIf="btnUpdateShow" (click)="updatePerusahaanDetails()" type="button" class="btn btn-primary">Update</button>
+        </div>
+      </div>
+    </div>
+  </div>
